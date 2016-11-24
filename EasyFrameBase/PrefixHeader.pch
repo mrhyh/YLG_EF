@@ -36,4 +36,5 @@
 #import "UserModel.h"
 #import <objc/runtime.h>
 #import "SVProgressHUD.h"
+#import "EFAppManager.h"
 #endif

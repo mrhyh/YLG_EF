@@ -14,6 +14,7 @@
 #define EFUserModel @"EFUserModel"
 
 @class Head,Objectid,Objectid;
+
 @interface UserModel : NSObject
 @property (nonatomic, copy) NSString *mobile;
 
@@ -35,6 +36,7 @@
 
 @property (nonatomic,assign)BOOL isLogin;
 
+@property (nonatomic,assign)BOOL isDurgUpdate;
 
 + (UserModel *)ShareUserModel;
 + (void)Logout;

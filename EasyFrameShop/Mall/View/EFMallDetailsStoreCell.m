@@ -7,6 +7,10 @@
 //
 
 #import "EFMallDetailsStoreCell.h"
+#import "KYMHButton.h"
+#import "EFSkinThemeManager.h"
+#import "UIImageView+WebCache.h"
+#import "UIView+SDAutoLayout.h"
 
 @implementation EFMallDetailsStoreCell{
     UILabel * _titleLabel;

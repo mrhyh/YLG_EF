@@ -33,22 +33,21 @@
 //    }
 //    return height;
 //}
+
 - (instancetype)initWithTitle:(NSString*)_title Image:(NSString*)_img andSuperVC:(UIViewController *)_vc{
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MenuCell"];
     if (self) {
         VC = _vc;
-        self.backgroundColor = EF_BGColor_Secondary;
+        self.backgroundColor = [UIColor clearColor];
         KYMHImageView * ma = [[KYMHImageView alloc] initWithImage:Img(_img) BaseSize:CGRectMake(15,11, 27, 27) ImageViewColor:[UIColor clearColor]];
-        ma.alpha = 0.85;
         [self addSubview:ma];
         
-        KYMHLabel * NocLB = [[KYMHLabel alloc] initWithTitle:_title BaseSize:CGRectMake(57, 9, 120, 30) LabelColor:[UIColor clearColor] LabelFont:15 LabelTitleColor:[EFSkinThemeManager getTextColorWithKey:SkinThemeKey_WhiteSecondary]  TextAlignment:NSTextAlignmentLeft];
+        KYMHLabel * NocLB = [[KYMHLabel alloc] initWithTitle:_title BaseSize:CGRectMake(57, 9, 120, 30) LabelColor:[UIColor clearColor] LabelFont:15 LabelTitleColor:[UIColor whiteColor] TextAlignment:NSTextAlignmentLeft];
         [self addSubview:NocLB];
         
-
-
         self.selectionStyle = 0;
     }
+    
     return self;
 }
 
@@ -58,11 +57,9 @@
         VC = _vc;
         self.backgroundColor = EF_BGColor_Secondary;
         
-        KYMHLabel * NocLB = [[KYMHLabel alloc] initWithTitle:_title BaseSize:CGRectMake(15, 10, 120, 30) LabelColor:[UIColor clearColor] LabelFont:15 LabelTitleColor:[EFSkinThemeManager getTextColorWithKey:SkinThemeKey_WhiteSecondary]  TextAlignment:NSTextAlignmentLeft];
+        KYMHLabel * NocLB = [[KYMHLabel alloc] initWithTitle:_title BaseSize:CGRectMake(15, 10, 120, 30) LabelColor:[UIColor clearColor] LabelFont:15 LabelTitleColor:[UIColor whiteColor]  TextAlignment:NSTextAlignmentLeft];
         [self addSubview:NocLB];
-        
-        
-        
+
         self.selectionStyle = 0;
     }
     return self;

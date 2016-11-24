@@ -9,6 +9,8 @@
 #import "EFPaymentPasswordVC.h"
 #import "KYShaker.h"
 #import "EFMallViewModel.h"
+#import "UIView+JSMAdd.h"
+
 static CGFloat const defaultMargin = 10.0f;
 
 @interface EFPaymentPasswordVC()

@@ -16,7 +16,6 @@ typedef void(^SelectedBlock)(id viewPager, NSInteger index);
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView *pageControl;
 
-
 /**
  *  下划线Y值和宽度
  */

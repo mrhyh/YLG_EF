@@ -8,7 +8,7 @@
 
 #import "EFRegisterViewController.h"
 #import "EFRegisterViewModel.h"
-#import "SVProgressHUD.h"
+
 
 static CGFloat const defaultMargin = 10.0f;
 

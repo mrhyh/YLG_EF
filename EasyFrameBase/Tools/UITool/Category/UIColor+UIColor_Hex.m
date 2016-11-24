@@ -9,6 +9,7 @@
 #import "UIColor+UIColor_Hex.h"
 
 @implementation UIColor (UIColor_Hex)
+
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
 {
     //删除字符串中的空格

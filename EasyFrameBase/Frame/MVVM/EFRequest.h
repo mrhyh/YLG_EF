@@ -8,8 +8,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
 #import "NetworkModel.h"
+#import "AFNetworking.h"
 
 /** 用户医生手动切换后发出的通知 */
 UIKIT_EXTERN NSString *const EFLoginInvalidNotification;

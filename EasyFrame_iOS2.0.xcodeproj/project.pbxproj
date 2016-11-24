@@ -92,6 +92,7 @@
 		278DC5AC1D5C4EAF008FB9C4 /* ErrorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorRequest.m; sourceTree = "<group>"; };
 		278DC5AE1D5C4EC8008FB9C4 /* ErrorViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorViewModel.h; sourceTree = "<group>"; };
 		278DC5AF1D5C4EC8008FB9C4 /* ErrorViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorViewModel.m; sourceTree = "<group>"; };
+		27C038FC1D6D381C0020E8D4 /* EFHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFHeader.h; sourceTree = "<group>"; };
 		DBFCFD201CF2A661007F3175 /* EasyFrame.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EasyFrame.plist; sourceTree = "<group>"; };
 		DBFCFD211CF2A661007F3175 /* EFAppHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAppHeader.h; sourceTree = "<group>"; };
 		DBFCFD221CF2A661007F3175 /* EFAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAppManager.h; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		DBFCFD511CF2A661007F3175 /* EFSkinThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSkinThemeManager.h; sourceTree = "<group>"; };
 		DBFCFD521CF2A661007F3175 /* EFSkinThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSkinThemeManager.m; sourceTree = "<group>"; };
 		DBFCFD531CF2A661007F3175 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		DBFCFD541CF2A661007F3175 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		DBFCFD611CF2A661007F3175 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
 		DBFCFD621CF2A661007F3175 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
 		DBFCFD631CF2A661007F3175 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				DBFCFD221CF2A661007F3175 /* EFAppManager.h */,
 				DBFCFD231CF2A661007F3175 /* EFAppManager.m */,
 				DBFCFD241CF2A661007F3175 /* Frame */,
-				DBFCFD541CF2A661007F3175 /* Header.h */,
+				27C038FC1D6D381C0020E8D4 /* EFHeader.h */,
 				DBFCFD551CF2A661007F3175 /* Libs */,
 				DBFCFD681CF2A661007F3175 /* PrefixHeader.pch */,
 				DBFCFD691CF2A661007F3175 /* readme.txt */,

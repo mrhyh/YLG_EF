@@ -8,6 +8,7 @@
 
 #import "NSMutableArray+WSMutableArray.h"
 #import "objc/runtime.h"
+#import "UIUtil.h"
 
 
 @implementation NSMutableArray (WSMutableArray)
@@ -26,7 +27,8 @@
             return [self ws_objectAtIndex:index];
         }
         @catch (NSException *exception) {
-            [UIUtil alert:@"数据出现异常"];
+//            [UIUtil alert:@"数据出现异常"];
+            NSLog(@"数据出现异常");
             // 在崩溃后会打印崩溃信息，方便我们调试。
             NSLog(@"---------- %s Crash Because Method %s  ----------\n", class_getName(self.class), __func__);
             NSLog(@"%@", [exception callStackSymbols]);

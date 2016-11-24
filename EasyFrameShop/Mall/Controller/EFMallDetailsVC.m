@@ -20,6 +20,7 @@
 #import "EFPushCommentVC.h"
 #import "EFGoodSpecificationCell.h"
 #import "EFSelecteSpecificationView.h"
+#import "UIColor+UIColor_Hex.h"
 
 static NSString *const SDEFMallDetailsTopCell = @"EFMallDetailsTopCell";
 static NSString *const SDEFMallDetailsStoreCell = @"EFMallDetailsStoreCell";

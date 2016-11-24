@@ -10,7 +10,6 @@
 
 @interface EF_AlbumView : UIView
 
-
 - (instancetype)initWithArr:(NSArray *)arr andFrame:(CGRect)frame andIndex:(int)_index;
 
 @end

@@ -68,21 +68,21 @@ static EFAppManager *appManager;
         {
             EFHomeSideViewController *home = [[EFHomeSideViewController alloc] init];
             self.sideHome = home;
-            
+            self.home = home;
         }
             break;
         case EFTabBarViewType:
         {
             EFHomeTabBarController *home = [EFHomeTabBarController shareInstance];
             self.home = home;
-            
+            self.tabHome = home;
         }
             break;
         case EFSideAndTabBarViewType:
         {
             EFHomeSideAndTabViewController *home = [[EFHomeSideAndTabViewController alloc] init];
+            self.sideAndTabHome = home;
             self.home = home;
-            
         }
             break;
     

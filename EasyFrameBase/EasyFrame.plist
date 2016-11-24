@@ -111,14 +111,14 @@
 				<key>TextColorTabberNormal</key>
 				<string>#FF3333</string>
 				<key>TextColorTabberSelected</key>
-				<string>#663300</string>
+				<string>#00a8ff</string>
 			</dict>
 			<key>BackgroundColor</key>
 			<dict>
 				<key>BGTextFiledColorLogin</key>
 				<string>#000000</string>
 				<key>MainColor</key>
-				<string>#FF3333</string>
+				<string>#00a8ff</string>
 				<key>BGColorPrimary</key>
 				<string>#99FFFF</string>
 				<key>BGColorSecondary</key>
@@ -220,14 +220,14 @@
 				<key>TextColorTabberNormal</key>
 				<string>#000000</string>
 				<key>TextColorTabberSelected</key>
-				<string>#663300</string>
+				<string>#00a8ff</string>
 			</dict>
 			<key>BackgroundColor</key>
 			<dict>
 				<key>BGTextFiledColorLogin</key>
 				<string>#000000</string>
 				<key>MainColor</key>
-				<string>#D0021B</string>
+				<string>#00a8ff</string>
 				<key>BGColorPrimary</key>
 				<string>#99FFFF</string>
 				<key>BGColorSecondary</key>

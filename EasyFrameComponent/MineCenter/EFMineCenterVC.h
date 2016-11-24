@@ -7,6 +7,9 @@
 //
 
 #import "EFBaseViewController.h"
+#import "KYMHImageView.h"
+#import "KYMHLabel.h"
+#import "KYMHButton.h"
 
 @interface EFMineCenterVC : EFBaseViewController <UITableViewDataSource,UITableViewDelegate>
 

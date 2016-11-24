@@ -8,6 +8,11 @@
 
 #import "EFAgencyPictureCell.h"
 #import <XHImageViewer.h>
+#import "UIView+SDAutoLayout.h"
+#import "EFHeader.h"
+#import "UIImageView+WebCache.h"
+#import "UIColor+UIColor_Hex.h"
+#import "EFSkinThemeManager.h"
 
 static CGFloat const cellMargin = 10.0f;
 

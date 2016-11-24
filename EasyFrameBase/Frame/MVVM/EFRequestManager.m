@@ -46,7 +46,7 @@
 //加载配置文件
 - (void)reloadConfigData{
     AllowInvaild = NO;
-    TimeOut = 60;
+    TimeOut = 15;
     severAddress = @"";
     
     configName = @"EFRequestConfig.plist";

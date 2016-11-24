@@ -29,6 +29,7 @@
 {
     SelectedBlock _block;
     NSInteger _pageNum;
+    NSInteger _currentClickNum;
 }
 
 //初始化
@@ -62,6 +63,7 @@
     _showSelectedBottomLine = YES;
     _enabledScroll = YES;
     _bottomLineToBottomSpace = 8;
+    _currentClickNum = 0; //默认点击是0号
 }
 
 //视图重绘
@@ -228,18 +230,45 @@
 - (void)tabBtnClicked:(UIButton *)sender
 {
     NSInteger index = sender.tag - 100;
+    __block typeof(self) weakSelf = self;
     
-    if (_showAnimation) {
-        [UIView beginAnimations:@"navTab" context:nil];
-        [UIView setAnimationDuration:0.3];
-        [self setSelectIndex:index];
-        _scrollView.contentOffset = CGPointMake(index * self.frame.size.width, 0);
-        [UIView commitAnimations];
-    }else{
-        [self setSelectIndex:index];
-        _scrollView.contentOffset = CGPointMake(index * self.frame.size.width, 0);
+    if (index == _currentClickNum) {
+        NSLog(@"点击了选中的当前栏目,不执行方法，避免重复点击");
+    }else {
+        [[self class] cancelPreviousPerformRequestsWithTarget:self selector:@selector(tabBtnClicked:) object:sender];
+        sender.enabled = NO;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            if (weakSelf.showAnimation) {
+                [UIView beginAnimations:@"navTab" context:nil];
+                [UIView setAnimationDuration:0.3];
+                [weakSelf setSelectIndex:index];
+                weakSelf.scrollView.contentOffset = CGPointMake(index * weakSelf.frame.size.width, 0);
+                [UIView commitAnimations];
+            }else{
+                [weakSelf setSelectIndex:index];
+                weakSelf.scrollView.contentOffset = CGPointMake(index * weakSelf.frame.size.width, 0);
+            }
+            
+            sender.enabled = YES;
+        });
+        _currentClickNum = index;
+        NSLog(@"当前点击的栏目是：%ld",_currentClickNum);
     }
+
+// 原来的代码
+//    if (_showAnimation) {
+//        [UIView beginAnimations:@"navTab" context:nil];
+//        [UIView setAnimationDuration:0.3];
+//        [self setSelectIndex:index];
+//        _scrollView.contentOffset = CGPointMake(index * self.frame.size.width, 0);
+//        [UIView commitAnimations];
+//    }else{
+//        [self setSelectIndex:index];
+//        _scrollView.contentOffset = CGPointMake(index * self.frame.size.width, 0);
+//    }
 }
+
 
 //设置选择的按钮索引 触发的方法
 - (void)setSelectIndex:(NSInteger)index

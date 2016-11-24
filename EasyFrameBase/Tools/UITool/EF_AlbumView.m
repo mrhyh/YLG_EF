@@ -110,7 +110,6 @@
         indexLb.text = [NSString stringWithFormat:@"%d/%lu",index+1,(unsigned long)arr.count];
         count = (int)arr.count;
             
-
             
         } completion:^(BOOL finished) {
             if (finished) {

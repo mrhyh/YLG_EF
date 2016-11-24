@@ -20,7 +20,7 @@
 //#import "ErrorViewModel.h"  //错误日志
 
 
-static CGFloat const defaultTimeOut = 60;
+static CGFloat const defaultTimeOut = 10;
 NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
 
 @interface EFRequest()
@@ -189,7 +189,7 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             NetworkModel *nm = [[NetworkModel alloc] init];
             nm.tag = self.tag;
             nm.status = NetworkModelStatusTypeServerUnusualError;
-            nm.message = @"服务器异常错误！";
+            //nm.message = @"服务器异常错误！";
             nm.content = error.userInfo;
             NSLog(@"%@",nm.message);
             if([error.userInfo.allKeys containsObject:@"com.alamofire.serialization.response.error.data"]){
@@ -200,7 +200,18 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             if (callBack && !_canceled) {
                 //请求不成功，可能是服务器错误等
                 callBack(CallBackStatusRequestFailure,nm);
+                NSLog(@"服务器异常错误！");
             }
+            
+#warning TODO 超时统一处理，确认后删除TODO
+            if ( error.code == -1001 ) {
+                [SVProgressHUD dismiss];
+                [UIUtil alert:@"网络超时"];
+            }else if (error.code == 1009) {
+                [SVProgressHUD dismiss];
+                [UIUtil alert:@"似乎已断开与互联网的连接,请检查网络"];
+            }
+            
             NSLog(@"------error:%@",error);
         }];
     }else{
@@ -255,7 +266,7 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             NetworkModel *nm = [[NetworkModel alloc] init];
             nm.status = NetworkModelStatusTypeServerUnusualError;
             nm.tag = self.tag;
-            nm.message = @"服务器异常错误!";
+            //nm.message = @"服务器异常错误!";
             nm.content = error.userInfo;
             if([error.userInfo.allKeys containsObject:@"com.alamofire.serialization.response.error.data"]){
                 NSData *data = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
@@ -440,7 +451,7 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             NetworkModel *nm = [[NetworkModel alloc] init];
             nm.status = NetworkModelStatusTypeServerUnusualError;
             nm.tag = self.tag;
-            nm.message = @"服务器异常错误!";
+            //nm.message = @"服务器异常错误!";
             nm.content = error.userInfo;
             if([error.userInfo.allKeys containsObject:@"com.alamofire.serialization.response.error.data"]){
                 NSData *data = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
@@ -455,7 +466,6 @@ NSString *const EFLoginInvalidNotification = @"EFLoginInvalidNotification";
             
         }
     }] resume];
-    
 }
 
 - (void)cancelRequest{

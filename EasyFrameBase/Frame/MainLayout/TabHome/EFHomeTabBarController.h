@@ -12,4 +12,8 @@
 
 + (EFHomeTabBarController *)shareInstance;
 
+- (void)showBadegInIndex:(int)index;
+
+- (void)hiddenBadegInIndex:(int)index;
+
 @end

@@ -6,8 +6,6 @@
 //  Copyright © 2016年 KingYon LLC. All rights reserved.
 //
 
-static NSString *cellId = @"SettingCell";
-
 #import "EFSettingViewController.h"
 #import "EFSettingCell.h"
 #import "EFAccountSettingVC.h"
@@ -16,6 +14,9 @@ static NSString *cellId = @"SettingCell";
 #import "EFLoginViewController.h"
 #import "EFLoginViewModel.h"
 #import "UserModel.h"
+#import "SVProgressHUD.h"
+#import "UIUtil.h"
+#import "EFSkinThemeManager.h"
 @interface EFSettingViewController ()
 /**列表内容,只读，初始化从plist文件中加载*/
 @property (nonatomic, copy) CompleteBlock completeBlock;
@@ -26,6 +27,8 @@ static NSString *cellId = @"SettingCell";
 @end
 
 @implementation EFSettingViewController
+
+static NSString *cellId = @"SettingCell";
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];

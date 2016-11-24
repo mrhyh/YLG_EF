@@ -10,9 +10,7 @@
 
 @interface EFSideMenuCell : UITableViewCell{
     UIViewController * VC;
-//    UserModel * _Smodel;
 }
-
 
 - (instancetype)initWithTitle:(NSString*)_title Image:(NSString*)_img andSuperVC:(UIViewController *)_vc;
 

@@ -7,6 +7,8 @@
 //  商品规格cell
 
 #import "EFGoodSpecificationCell.h"
+#import "EFSkinThemeManager.h"
+#import "UIView+SDAutoLayout.h"
 
 @interface EFGoodSpecificationCell()
 @property (nonatomic, weak) UILabel *selectResultLabel;

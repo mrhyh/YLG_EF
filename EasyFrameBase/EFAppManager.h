@@ -26,6 +26,7 @@
 @property (nonatomic,strong)EFHomeSideViewController *sideHome;
 @property (nonatomic,strong)EFHomeSingleViewController *singleHome;
 @property (nonatomic,strong)EFHomeTabBarController *tabHome;
+@property (nonatomic,strong)EFHomeSideAndTabViewController *sideAndTabHome;
 
 /**
  *  获取项目的根控制器
